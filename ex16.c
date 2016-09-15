@@ -42,31 +42,34 @@ void Person_print(struct Person *who) {
 
 int main(int argc, char *argv[])
 {
-	
-	struct Person *joe = Person_create("Joe Alex", 32, 64, 140);
+	struct Person joe;
+	joe.name = "Joe Alex";
+	joe.age = 32;
+	joe.height = 64;
+	joe.weight = 140;
 
-	struct Person *frank = Person_create("Frank Blank", 20, 72, 180);
-
-
-	printf("Joe is at memory location: %p\n", joe);
-	Person_print(joe);
-
-	printf("frank is at memory location: %p\n", frank);
-	Person_print(frank);
+	// struct Person frank = Person_create("Frank Blank", 20, 72, 180);
 
 
-	joe->age += 20;
-	joe->height -= 2;
-	joe->weight += 40;
-	Person_print(joe);
+	printf("Joe is at memory location: %p\n", &joe);
+	Person_print(&joe);
 
-	frank->age += 20;
-	frank->weight += 20;
-	Person_print(frank);
+	// printf("frank is at memory location: %p\n", &frank);
+	// Person_print(&frank);
 
 
-	Person_destroy(joe);
-	Person_destroy(frank);
+	joe.age += 20;
+	joe.height -= 2;
+	joe.weight += 40;
+	Person_print(&joe);
+
+	// frank.age += 20;
+	// frank.weight += 20;
+	// Person_print(&frank);
+
+
+	// Person_destroy(&joe);
+	// Person_destroy(&frank);
 
 	return 0;
 }
