@@ -101,7 +101,7 @@ int main(int argc, char *argv[])
 	test_debug();
 	test_log_err();
 	test_log_warn();
-	test_log_info();
+	test_log_info();	
 
 	check(test_check("ex19.c") == 0, "failed with ex19.c");
 	check(test_check(argv[1]) == -1, "failed with argv");
