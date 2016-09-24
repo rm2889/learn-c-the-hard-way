@@ -1,0 +1,7 @@
+-g = for debugging, i.e. produce debugging information that GDB can work with. 
+
+-DNDEBUG = -D[something] will set something = 1. This will be done as a preprocessing macro. I.e. predefine `something` as a macro, with definition 1.
+
+-c = compile or assemble the source file, but do not link. The linking is simply not done. The ultimate output is in the form of an object file for each source file. By default, if an o flag is not specified, the object file name for a source file is made by replacing the suffix `.c`, `.i`, `.s`, etc. with `.o`
+
+-o fileName = place output in file `fileName`. This applies to whatever sort of output is being produced, whether its an executable, object file, assembler file, or preprocessed C code!
