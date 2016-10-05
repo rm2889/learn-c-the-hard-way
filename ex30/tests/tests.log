@@ -1,0 +1,3 @@
+DEBUG main tests/libex29_tests.c:73: ----- RUNNINGyeseer: ./tests/libex29_tests
+DEBUG all_tests tests/libex29_tests.c:65: 
+----- test_dlopen
